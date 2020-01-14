@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SearchPost
 
-## Available Scripts
+Es una aplicacion para las busqueda de post utilizando etiquetas. 
 
-In the project directory, you can run:
+El usuario dispone de una barra de busqueda, la cual nos permite ingresar un tag para buscar publicaciones que correspondan con el mismo. La aplicacion nos dara los resultados dependiendo del tag suministrado.
 
-### `npm start`
+**¡Importante!**
+ Todos los componentes utilizados para el desarrollo de la aplicacion estan comentados a detalle.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Herramientas Utilizadas
+  - HTML y CSS
+  - ReactJs
+  - PropTypes
+  - API Fetch
+  - Bootstrap
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Componentes React
+  - index.js
+  - App.js
+  - Tags.js
+  - Api.js
+  - Post.js
+## 1. index.js
 
-### `npm test`
+Este archivo ejecuta el renderizado de la aplicacion en el archivo public index.html
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. App.js
 
-### `npm run build`
+Este es el componente principal de la aplicacion. Este se encarga de renderizar los componentes Tags.js y Api.js. Tambien es el que recibe la informacion sumistrada por el componente Tags.js y enviada al componente Api.js.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| this.state | caracteristica |
+| ------ | ------ |
+|tag|Almacena informacion entregada por el usuario|
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+| Métodos | caracteristicas |
+| ------ | ------ |
+|getTag()|Realiza el cambio de estado al recibir informacion del componente Tags.js|  
+## 3. Tags.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este componente tiene como funcion principal adquirir informacion ingresada por el usuario.
 
-### `npm run eject`
+| this.props | caracteristica |
+| ------ | ------ |
+|onChange|Función pasa informacion al componente App.js|
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| this.state | caracteristica |
+| ------ | ------ |
+|tagName|Almacena informacion entregada por el usuario|
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Métodos | caracteristicas |
+| ------ | ------ |
+|handleChange()|Maneja el evento de cambios en la entrada del formulario| 
+|handleSubmit()|Maneja el evento submit en el formulario|
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 4. Api.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Este componente se encarga de la comunicacion con el API y el renderizado según su respuesta de la misma.
 
-## Learn More
+| this.props | caracteristica |
+| ------ | ------ |
+|tagName|Almacena informacion entregada por el usuario|
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| this.state | caracteristica |
+| ------ | ------ |
+|response|Almacena el objeto recibido por el API|
+|loading|Indica en que estado se encuentra la solicitud del Request|
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Métodos | caracteristicas |
+| ------ | ------ |
+|fetchGet()|Ejecuta la solicitud al API segun la informacion recibida por el usuario| 
 
-### Code Splitting
+## 5. Post
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Este componente recibe los datos adquiridos por el API y renderiza un post
 
-### Analyzing the Bundle Size
+| this.props | caracteristica |
+| ------ | ------ |
+|owner|Objeto que contiene la informacion del usuario|
+|image|Direccion url de la imagen principal del Post|
+|message|Mensaje que acompaña la publicacion del Post|
+|tags|Vector que contiene todos los tags que poseé el Post|
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Desarrollado por:**
+Felipe Laboren: felipelaboren93@gmail.com
