@@ -20,9 +20,7 @@ export class Api extends React.Component{
     fetchGet(){
         fetch(`https://n161.tech/api/dummyapi/tag/${this.props.tagName}/post`)
         .then(resp => {
-            if (resp.ok){
-                return resp.json()
-            }            
+            return resp.json()                        
           })
         .then(jsonResponse => {            
             this.setState({
