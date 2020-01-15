@@ -64,7 +64,7 @@ Este componente se encarga de la comunicacion con el API y el renderizado según
 | ------ | ------ |
 |response|Almacena el objeto recibido por el API|
 |loading|Indica en que estado se encuentra la solicitud del Request|
-|error|Indica si hay o no error en Request|
+|error|Indica el estado del error del Request|
 
 | Métodos | caracteristicas |
 | ------ | ------ |
