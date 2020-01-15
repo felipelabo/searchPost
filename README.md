@@ -64,6 +64,7 @@ Este componente se encarga de la comunicacion con el API y el renderizado según
 | ------ | ------ |
 |response|Almacena el objeto recibido por el API|
 |loading|Indica en que estado se encuentra la solicitud del Request|
+|error|Indica si hay o no error en Request|
 
 | Métodos | caracteristicas |
 | ------ | ------ |
@@ -79,6 +80,10 @@ Este componente recibe los datos adquiridos por el API y renderiza un post
 |image|Direccion url de la imagen principal del Post|
 |message|Mensaje que acompaña la publicacion del Post|
 |tags|Vector que contiene todos los tags que poseé el Post|
+
+| Métodos | caracteristicas |
+| ------ | ------ |
+|handleClick()|Maneja el evento del cambio de color en el "Me Gusta"| 
 
 **Desarrollado por:**
 Felipe Laboren: felipelaboren93@gmail.com

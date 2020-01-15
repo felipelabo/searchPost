@@ -59,6 +59,34 @@
   justify-content: center;
   
 }
+/*Api.js*/
+
+#result{
+  font-size: 25px;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+
+}
+
+.resultTags{  
+  text-shadow: 3px 3px 2px #558ABB;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+}
+
+.noTags, .loading,.result,.error{
+  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.spinner-border{
+  color: #558ABB;
+  border-width: 5px;
+  width: 50px;
+  height: 50px;
+  
+}
 
 /*--Post--*/
 .post{
@@ -91,7 +119,7 @@
 .comment p{  
   margin:30px;
   font-size: 20px;
-  font-family: Andale Mono, monospace;
+  font-family: Andale Mono, monospace;  
 }
 
 .comment span{
@@ -100,19 +128,4 @@
 
 .tagsComment{
   color:#558ABB;
-}
-
-.resultTags{
-  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
-  text-shadow: 3px 3px 2px #558ABB;
-}
-
-/*--Arreglos Loading y Sin Tags--*/
-
-.noTags, .loading,.result{
-  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
-  text-align: center;
-  margin-top: 50px;
-  font-weight: 600;
-  font-size: 40px;
 }

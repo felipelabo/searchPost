@@ -17,10 +17,18 @@ export class App extends React.Component{
     this.getTag = this.getTag.bind(this)
     
   }
-  
+
   getTag(value){
     this.setState({tag:value});
   }
+
+  shouldComponentUpdate(nextProps,nextState){
+    if(nextState.tag === this.state.tag){
+        return false;
+    } else {
+        return true;
+    }
+}
   
   /*Aqui verifica primero si hay etiqueta adquirida. Luego renderiza Tags.js y Api.js*/
   render(){
@@ -29,7 +37,7 @@ export class App extends React.Component{
 
     return (
       <div>
-        <Tags onChange={this.getTag}/>        
+        <Tags onChange={this.getTag}/>
         {post}
       </div>      
     );    

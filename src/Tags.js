@@ -41,7 +41,7 @@ export class Tags extends React.Component{
                   <div className="row justify-content-center ">
                     <form className="formTags" onSubmit={this.handleSubmit}>
                         <label for="inputTag" id="labelInputTag">#</label>         
-                        <input type="text" value={this.state.tagName} onChange={this.handleChange} id="inputTags" />       
+                        <input type="text" value={this.state.tagName} onChange={this.handleChange} id="inputTags" required/>       
                         <button type="submit" id="buttonTags">Search</button>
                     </form>
                   </div>
